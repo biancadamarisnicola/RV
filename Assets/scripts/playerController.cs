@@ -12,16 +12,17 @@ public class playerController : MonoBehaviour {
 	CharacterController cc;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
+//	    Cursor.visible = false;
 		Screen.lockCursor = true;
 		cc = GetComponent<CharacterController>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		CharacterController cc = GetComponent<CharacterController>();
-
-		//Rotation
+		
+        //Rotation
 		float rotX = Input.GetAxis("Mouse X");
 		transform.Rotate (0, rotX, 0);
 
@@ -46,5 +47,6 @@ public class playerController : MonoBehaviour {
 
 		cc.Move(speed*Time.deltaTime);
 	}
+
 }
  
