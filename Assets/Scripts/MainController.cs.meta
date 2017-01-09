@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1265a75ef70487c4891530450760c2ab
+timeCreated: 1483993031
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - SpawnField: {fileID: 1342297615293474, guid: 2a2969983c13b934986b3785867e9a53,
+      type: 2}
+  - healthy_prefab: {fileID: 1185984817717132, guid: 3827e0bb58c26ae45a4c19db39e378c3,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
