@@ -12,20 +12,27 @@ public class BulletCollision : MonoBehaviour {
 
     void OnCollisionEnter(UnityEngine.Collision otherObj) {
         bool shouldDestroyOther = false;
+        Debug.Log("OnCollisionEnter");
+        Debug.Log(otherObj.gameObject.tag);
         if (otherObj.gameObject.CompareTag(Constants.SPIDER_TAG)) {
+            print("spider");
             ScoreController.changeScore(Constants.BULLET_COLLISION_SPIDER_POINTS);
             shouldDestroyOther = true;
         }
         else if (otherObj.gameObject.CompareTag(Constants.HEALTHY_TAG)) {
+            print("healthy");
             ScoreController.changeScore(Constants.BULLET_COLLISION_HEALTHY_POINTS);
             shouldDestroyOther = true;
         }
         else if (otherObj.gameObject.CompareTag(Constants.UNHEALTHY_TAG)) {
+             print("unhealthy");
             ScoreController.changeScore(Constants.BULLET_COLLISION_UNHEALTHY_POINTS);
             shouldDestroyOther = true;
         }
-        if (shouldDestroyOther)
+        if (shouldDestroyOther){
+            print("shouldDestroyOther");
             Destroy(otherObj.gameObject);
+        }
         Destroy(gameObject, 1f);
     }
 }

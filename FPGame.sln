@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPGame.Plugins", "FPGame.Plugins.csproj", "{910E7419-EC76-578B-F6A5-AB7A81EE96A5}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPGame", "FPGame.csproj", "{5D8BC443-6538-AE1A-FA3B-87A134018CE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPGame.Editor.Plugins", "FPGame.Editor.Plugins.csproj", "{87A0C7C7-8D60-B25B-E2B5-06B704B4A3E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{910E7419-EC76-578B-F6A5-AB7A81EE96A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{910E7419-EC76-578B-F6A5-AB7A81EE96A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{910E7419-EC76-578B-F6A5-AB7A81EE96A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{910E7419-EC76-578B-F6A5-AB7A81EE96A5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5D8BC443-6538-AE1A-FA3B-87A134018CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5D8BC443-6538-AE1A-FA3B-87A134018CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D8BC443-6538-AE1A-FA3B-87A134018CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D8BC443-6538-AE1A-FA3B-87A134018CE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87A0C7C7-8D60-B25B-E2B5-06B704B4A3E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87A0C7C7-8D60-B25B-E2B5-06B704B4A3E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87A0C7C7-8D60-B25B-E2B5-06B704B4A3E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87A0C7C7-8D60-B25B-E2B5-06B704B4A3E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
