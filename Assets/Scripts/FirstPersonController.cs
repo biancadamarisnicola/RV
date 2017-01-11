@@ -1,4 +1,5 @@
 using System;
+using Assets;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
@@ -254,21 +255,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             //body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
-            Destroy(body.gameObject);
-          
-                //if (otherObj.gameObject.CompareTag("Spider")) {
+            if (!body.CompareTag(Constants.SPIDER_TAG))
+                Destroy(body.gameObject);
+            computeScore(body);
 
-                //    Destroy(otherObj.gameObject);
-                //    //ScoreController.changeScore(Constants.BULLET_COLLISION_SPIDER_POINTS);
-                //    //shouldDestroyOther = true;
-                //} else if (otherObj.gameObject.CompareTag("Healthy")) {
-                //    //ScoreController.changeScore(Constants.BULLET_COLLISION_HEALTHY_POINTS);
-                //    //shouldDestroyOther = true;
-                //} else if (otherObj.gameObject.CompareTag("Unhealthy")) {
-                //    //ScoreController.changeScore(Constants.BULLET_COLLISION_UNHEALTHY_POINTS);
-                //    //shouldDestroyOther = true;
-                //}
-            
+
+        }
+
+        private void computeScore(Rigidbody body) {
+            if (body.CompareTag("Spider")) {
+                ScoreController.changeScore(Constants.PLAYER_COLLISION_SPIDER_POINTS);
+            } else if (body.CompareTag("Healthy")) {
+                ScoreController.changeScore(Constants.PLAYER_COLLISION_HEALTHY_POINTS);
+            } else if (body.CompareTag("Unhealthy")) {
+                ScoreController.changeScore(Constants.PLAYER_COLLISION_UNHEALTHY_POINTS);
+            }
         }
     }
+
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Assets;
 using UnityEngine;
 
 public class RaycastShootComplete : MonoBehaviour {
@@ -57,20 +58,14 @@ public class RaycastShootComplete : MonoBehaviour {
 				laserLine.SetPosition (1, hit.point);
 
 				// Get a reference to a health script attached to the collider we hit
-				ShootableBox health = hit.collider.GetComponent<ShootableBox>();
-
-				// If there was a health script attached
-				if (health != null)
-				{
-					// Call the damage function of that script, passing in our gunDamage variable
-					health.Damage (gunDamage);
-				}
 
 				// Check if the object we hit has a rigidbody attached
 				if (hit.rigidbody != null)
 				{
 					// Add force to the rigidbody we hit, in the direction from which it was hit
-					//hit.rigidbody.AddForce (-hit.normal * hitForce);
+					
+
+                    computeScore(hit);
                     Destroy(hit.transform.gameObject);
 				}
 			}
@@ -80,10 +75,22 @@ public class RaycastShootComplete : MonoBehaviour {
                 laserLine.SetPosition (1, rayOrigin + (fpsCam.transform.forward * weaponRange));
 			}
 		}
+
+    
 	}
 
+    private void computeScore(RaycastHit hit) {
+        if (hit.rigidbody.CompareTag(Constants.SPIDER_TAG)) {
+            ScoreController.changeScore(Constants.BULLET_COLLISION_SPIDER_POINTS);
+        } else if (hit.rigidbody.CompareTag(Constants.HEALTHY_TAG)) {
+            ScoreController.changeScore(Constants.BULLET_COLLISION_HEALTHY_POINTS);
+        } else if (hit.rigidbody.CompareTag(Constants.UNHEALTHY_TAG)) {
+            ScoreController.changeScore(Constants.BULLET_COLLISION_UNHEALTHY_POINTS);
+        }
+    }
 
-	private IEnumerator ShotEffect()
+
+    private IEnumerator ShotEffect()
 	{
 		// Play the shooting sound effect
 		gunAudio.Play ();

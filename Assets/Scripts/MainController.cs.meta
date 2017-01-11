@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1265a75ef70487c4891530450760c2ab
-timeCreated: 1483993031
+timeCreated: 1484158128
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -8,6 +8,12 @@ MonoImporter:
   - SpawnField: {fileID: 1342297615293474, guid: 2a2969983c13b934986b3785867e9a53,
       type: 2}
   - healthy_prefab: {fileID: 1185984817717132, guid: 3827e0bb58c26ae45a4c19db39e378c3,
+      type: 2}
+  - unhealthy1_prefab: {fileID: 100000, guid: 6e616e7bf46c26748a153fac2d7b1293, type: 2}
+  - unhealthy2_prefab: {fileID: 100000, guid: 1168e432e0c205345b90c4ec2f307c97, type: 2}
+  - unhealthy3_prefab: {fileID: 100000, guid: 2d434559430d5e54183217ebf67f2bba, type: 2}
+  - unhealthy4_prefab: {fileID: 100000, guid: a7dfc8f0b06a1f64a889c6c9e36e23d5, type: 2}
+  - spider_prefab: {fileID: 1505358484414060, guid: 37b5cd9b3dab70b4a990e0a087ac7d98,
       type: 2}
   executionOrder: 0
   icon: {instanceID: 0}

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23962571745176990}
   - component: {fileID: 54205006145239572}
   - component: {fileID: 136274658912108718}
+  - component: {fileID: 114307301891316984}
   m_Layer: 0
   m_Name: Broccoli
   m_TagString: Healthy
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1185984817717132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2167459, y: 5.124, z: 0.05499983}
+  m_LocalPosition: {x: 5.9, y: 5.124, z: -6.7}
   m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,6 +97,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114307301891316984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1185984817717132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34952bfb5729954db7a5a142d39cca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136274658912108718
 CapsuleCollider:
   m_ObjectHideFlags: 1
